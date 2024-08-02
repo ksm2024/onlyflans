@@ -1,7 +1,6 @@
 # Curso Python - Django 2024
 
-Crear una aplicación web para una PYME de venta de postres, que permita el acceso a usuarios no registrados solo a su página
-principal y que además tenga una url a la cual solo podrán acceder aquellos usuarios que
+El proyecto consiste en crear una aplicación web para una PYME de venta de postres, que permita el acceso a usuarios no registrados solo a su página principal y que además tenga una url a la cual solo podrán acceder aquellos usuarios que
 estén registrados en el sistema.
 
 ## MODULO 6 - CRONOGRAMA
@@ -11,6 +10,79 @@ estén registrados en el sistema.
 El proyecto estará dividido en 5 hitos incrementales que te permitirán comenzar un proyecto desde las bases, los cuales son:
 
 1. **HITO-1** Levantando tu primer proyecto Django: en este Hito se preparará un ambiente nuevo e inicializará un proyecto Django desde 0.
+    1. Crea la carpeta onlyflans 
+    2. Dentro de esta crea un entorno virtual
+    python -m venv venv
+    3. Activar 
+    source venv/Scripts/activate
+    4. Instala Django 
+    pip install django==5.0.7 --trusted-host pypi.org --trusted-host files.pythonhosted.org
+        pip freeze
+    5. Crea un project con el llamado onlyflans (recuerden usar el punto al final) -->
+    django-admin startproject onlyflans .
+    6. Probar el Proyecto ejecutando runserver
+    python manage.py runserver
+    7. Preparar y migrar
+    python manage.py makemigrations
+    python manage.py migrate
+    8. Crear user y password del admin
+    python manage.py createsuperuser
+    9. Probar el Proyecto ejecutando runserver e ingresar como admin
+    /admin
+    10. Crear una app llamada web
+    python manage.py startapp web
+
+    11. Armar la estructura
+        - static:
+            - js index.js console.log(" ")
+            - css index.css
+            -img-favicon       
+        - templates: index.html  / base.html
+        
+    12. En la views.py de web crear una función de respuesta http 
+    views.py en la app
+
+    from django.shortcuts import render
+    from django.http import HttpResponse
+    def hola(request):
+    return HttpResponse("Hola, onlyflans")
+
+
+    13. En la urls.py del proyecto anexar la route para la función previamente creada
+    urls.py en el project
+
+    from django.contrib import admin
+    from django.urls import path
+    from onlyflans.views import hola
+    urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', hola)
+    ]
+
+    14. Modularizar la route creada (utilizando el include)
+    urls.py en el project
+
+    from django.contrib import admin
+    from django.urls import path, include
+    from web.views import hola
+
+    urlpatterns = [
+        path('admin/', admin.site.urls),
+        path('', hola),
+        path('', include('web.urls')),
+    ]
+
+    15. Utiliza el utilitario manage.py para la creación de un nuevo proyecto Django.
+
+    16. - .gitignore
+    17. - README.md - Documentación
+    18. - .env (variables de entorno)
+    19. - requirements.txt
+    pip freeze > requirements-onlyflans.txt
+
+    20. Subir el proyecto a gitHub (privado)
+
+
 
 2. **HITO-2** Creación de un sitio web responsive con Bootstrap: en este Hito se crearán las primeras estructuras que permitirán mostrar datos en nuestro sitio web.
 
@@ -262,6 +334,7 @@ https://forms.gle/m4UkmSVECYhTMQqGA
 
 
 #INTEGRANTES
+
 JONATHAN TOLOZA
 
 KATHERINE SILVA

@@ -1,6 +1,3 @@
-pip3.2.# HITO 1 - PROYECTO
-1. Levantar primer proyecto en Django
-  - Utiliza el administrador de paquetes PIP para la instalación de los componentes Django.
   1. Crea la carpeta onlyflans 
   2. Dentro de esta crea un entorno virtual
   python -m venv venv
@@ -51,7 +48,16 @@ urlpatterns = [
   path('', hola)
 ]
   14. Modularizar la route creada (utilizando el include)
+urls.py en el project
+from django.contrib import admin
+from django.urls import path, include
+from web.views import hola
 
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', hola),
+    path('', include('web.urls')),
+]
   15. Utiliza el utilitario manage.py para la creación de un nuevo proyecto Django.
 
   16. - .gitignore
