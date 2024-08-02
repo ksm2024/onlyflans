@@ -1,7 +1,6 @@
 # Curso Python - Django 2024
 
-Se requiere investigar y elegir un Framework para crear una aplicación web para una PYME
-de venta de postres, que permita el acceso a usuarios no registrados solo a su página
+Crear una aplicación web para una PYME de venta de postres, que permita el acceso a usuarios no registrados solo a su página
 principal y que además tenga una url a la cual solo podrán acceder aquellos usuarios que
 estén registrados en el sistema.
 
@@ -260,3 +259,10 @@ Fecha es desde 24/09 al 30/09
 
 https://forms.gle/m4UkmSVECYhTMQqGA
 # onlyflans
+
+
+#INTEGRANTES
+JONATHAN TOLOZA
+
+KATHERINE SILVA
+https://github.com/ksm2024/onlyflans.git 
