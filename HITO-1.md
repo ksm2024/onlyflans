@@ -61,12 +61,33 @@ urlpatterns = [
   15. Utiliza el utilitario manage.py para la creación de un nuevo proyecto Django.
 
   16. - .gitignore
+  https://www.toptal.com/developers/gitignore/
+
   17. - README.md - Documentación
+
   18. - .env (variables de entorno)
+  
   19. - requirements.txt
   pip freeze > requirements-onlyflans.txt
   20. Subir el proyecto a gitHub (privado)
 
+-en la app agregar
+  -URLS.PY 
+-projecto settings.py
+    -INSTALLED APP: agregar la/s app/s creadas
+    'web'
+    -STATIC: agregar
+    import os
+    STATICFILES_DIRS = [
+        os.path.join(BASE_DIR, "static"),
+    ]
+-.ENV (revisar repositorio)
+ base
+
+-tempaltes: html ---incluir arriba del link a css
+{% load static %}
+
+  href="{% static 'css/styles.css' %}"
 
 
 # Requerimientos
