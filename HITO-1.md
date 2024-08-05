@@ -90,6 +90,30 @@ urlpatterns = [
   href="{% static 'css/styles.css' %}"
 
 
+21. TEMPLATES NO APARECIA Y DABA ERROR
+en Settings.py 
+import os
+y agregar esta direccion --> [os.path.join(BASE_DIR, 'templates')]
+
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+
+22. MOVER LA CARPETA TEMPLATES DENTRO DE LA APP WEB
+
 # Requerimientos
 1. python usada es python 3. Realiza un “pantallazo” de la versión de python mostrada en la terminal/consola y guardalo en un archivo jpg o png dentro de la carpeta requerimiento1.
 

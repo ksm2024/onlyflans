@@ -83,6 +83,9 @@ estén registrados en el sistema.
 
 1. Abre tu navegador web y navega a `http://127.0.0.1:8000/` para ver la página de inicio.
 2. Usa el panel de administración en `http://127.0.0.1:8000/admin/` para gestionar el contenido de la aplicación.
+3. Mensaje de texto `http://127.0.0.1:8000/text/`
+4. Json `http://127.0.0.1:8000/json/`
+5. Template `http://127.0.0.1:8000/template/`
 
 ### Rutas
 
