@@ -1,5 +1,25 @@
 body {
-    background-color: rgb(245, 238, 148);
     color: rgb(10, 10, 10);
     text-align: center;
 }
+
+.navbar-nav .nav-link:hover {
+    color: #ffffff; 
+}
+
+h6 {
+    color: #380786 ;
+}
+
+
+#credito {
+    margin-top: 3rem;
+    background-color: #9782b9;
+    font-size: 1rem;
+    height: 4rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    
+}
+

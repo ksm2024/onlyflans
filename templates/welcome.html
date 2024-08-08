@@ -1,0 +1,16 @@
+{% extends 'base.html' %} 
+
+{% block content %} 
+<div>
+  
+    
+    {% if is_active %}
+    <h2> BIENVENIDO {{ user }}</h2>
+    {% else%}
+    
+    <h2>{{ message }}</h2>  
+    <h2>REGISTRESE PARA DISFRUTAR MAS BENEFICIOS</h2> 
+    {% endif %}
+</div>
+
+{% endblock %}

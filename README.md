@@ -123,9 +123,6 @@ onlyflans/
 
 ### Integrantes
 
-- JONATHAN TOLOZA
-  - [GitHub](<enlace github>)
-
 - KATHERINE SILVA
   - [GitHub](<https://github.com/ksm2024/onlyflans.git>)
 

@@ -1,0 +1,71 @@
+{% extends 'base.html' %} 
+{% load static %}
+{% block content %} 
+<div class="container">
+  
+  <h1>{{message}}</h1>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="card">
+        <img src="{% static 'img/tortachocolate.png' %}" class="card-img-top" alt="Tarta de chocolate">
+        <div class="card-body">
+          <h5 class="card-title">Tarta de chocolate</h5>
+          <p class="card-text">Una delicia que lleva dos planchas de bizcocho de chocolate, separadas por una fina capa de mermelada de damasco y recubiertas con un glaseado de chocolate.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="{% static 'img/tiramisu.png' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Tiramisú</h5>
+          <p class="card-text">Bizcocho humedecido con una mezcla de café y licor y superponerlo en capas, alternando entre la crema y el bizcocho</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="{% static 'img/pannacotta.png' %}" class="card-img-top" alt="Panna Cotta">
+        <div class="card-body">
+          <h5 class="card-title">Panna Cotta</h5>
+          <p class="card-text">Parecido al flan y con una textura suave y gelatinosa</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="{% static 'img/frutosrojos.png' %}" class="card-img-top" alt="Pávlola">
+        <div class="card-body">
+          <h5 class="card-title">Pávlola</h5>
+          <p class="card-text">consiste en una base de merengue horneado sobre la cual se coloca crema batida, chocolate y trozos de fruta, en especial los frutos rojos.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="{% static 'img/papaya.png' %}" class="card-img-top" alt="Crema de papaya">
+        <div class="card-body">
+          <h5 class="card-title">Crema de papaya</h5>
+          <p class="card-text">Este postre esta hecho a base de una crema de papaya y se acostumbra servirlo con helado de vainilla.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="{% static 'img/milhoja.png' %}" class="card-img-top" alt="Milhojas">
+        <div class="card-body">
+          <h5 class="card-title">Milhojas</h5>
+          <p class="card-text">Este crujiente postre está hecho de finas capas de masa hojaldre y lleva crema pastelera o crema de leche, tal vez ambos si eres fan del dulce y por encima está cubierto con azúcar impalpable. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  
+</div>
+{% endblock %}
