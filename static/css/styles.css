@@ -3,6 +3,7 @@ body {
     text-align: center;
 }
 
+
 .navbar-nav .nav-link:hover {
     color: #ffffff; 
 }
@@ -12,14 +13,14 @@ h6 {
 }
 
 
+
 #credito {
     margin-top: 3rem;
     background-color: #9782b9;
     font-size: 1rem;
     height: 4rem;
-    padding: 2rem;
-    display: flex;
-    justify-content: space-between;
+    padding: 1rem;
+    
     
 }
 

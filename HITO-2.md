@@ -52,8 +52,9 @@ urlpatterns = [
 Para la mejor visualización del sitio web que estamos creando se debe utilizar tanto la “grilla” de bootstrap como sus componentes, permitiendo al sitio web “acomodarse” a distintos tamaños de pantalla y resoluciones, además de permitir su rápido desarrollo. Puedes valerte de componentes de bootstrap como navbar, tarjetas o cards, entre otros según desees.
 
 
-```
-```
+
+
+
 
 ## IMPORTANTE
 Para mostrar los productos en el home (index.html nuestro) usamos una lista dentro del mismo views. 

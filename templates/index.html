@@ -3,21 +3,22 @@
 {% block content %} 
 <div class="container">
   
-  <h1>{{message}}</h1>
+  <h1>{{ message }}</h1>
   
   <div class="row row-cols-1 row-cols-md-3 g-4">
-    {% for p in postres %}
-    <div class="col-3">
+    {% for p in flanes_publicos %}
+    <div class="col">
       <div class="card">
-        <img src="{{p.url}}" class="card-img-top" alt="Tarta de chocolate">
+        <img src="{{ p.image_url }}" class="card-img-top" alt="{{ p.name }}" style="object-fit: cover; width: 100%; height: 200px;">
         <div class="card-body">
-          <h5 class="card-title">{{p.name}}</h5>
-          <p class="card-text">{{p.description}}</p>
+          <h5 class="card-title">{{ p.name }}</h5>
+          <p class="card-text">{{ p.description | slice:":50"}}{% if flan.description|length > 50 %}...{% endif %}</p>
         </div>
       </div>
     </div>
-     {% endfor %} 
+    {% endfor %} 
   </div>
   
 </div>
 {% endblock %}
+
