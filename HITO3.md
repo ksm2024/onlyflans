@@ -163,3 +163,76 @@ def indice(request):
 </div>
 {% endblock %}
 ```
+
+### CONTACT FORM
+0. AGREGAR EN NAVBAR
+1. CREAR CONTACT.PY
+```py
+{% extends 'base.html' %} {% block content %}
+<div class="container">
+  <div class="col-12 col-md-6 offset-0 offset-md-3 mt-4 mb-4">
+    <h3 class="text-center">Contáctanos</h3>
+
+    <div>
+      <form method="post">
+       
+        <button type="submit">Enviar</button>
+      </form>
+
+    </div>
+  </div>
+</div>
+{% endblock %}
+```
+2. CREAR CLASS EN MODELS.PY
+#FORMS.FORM
+```PY
+from django import forms
+class ContactForm(models.Model):
+    contact_form_uuid = models.UUIDField(default=uuid.uuid4, editable=False)
+    customer_email = models.EmailField()
+    customer_name = models.CharField(max_length=64)
+    message = models.TextField()
+    
+    def __str__(self):
+        return self.customer_name
+
+
+```
+- **Uso Típico**: Formularios para búsquedas, suscripciones, o entradas que no requieren persistencia en una base de datos.
+
+# MODELS.FORM
+ ```python
+  from django import forms
+  from .models import Contact
+
+  class ContactModelForm(forms.ModelForm):
+      class Meta:
+          model = Contact
+          fields = ['customer_email', 'customer_name', 'message']
+  ```
+
+- **Uso Típico**: Formularios para crear o editar instancias de modelos en la base de datos, como formularios de contacto, formularios de registro de usuario, o formularios de entrada de datos para una base de datos.
+
+
+2. CREAR FUNCION EN VIEWS.PY
+```PY
+from .models import ContactForm
+
+def contact(request):
+    return render(request, 'contact.html', {})
+
+
+# *  --- apply ContactModelForm ---
+# from .forms import ContactModelForm  # Asegúrate de importar el formulario correcto
+
+# *  <!-- apply MODEL-FORM contacto -->
+def contacto_model_form(request):
+    return render(request, 'contactus_model_form.html', {})
+# *  --- apply ContactModelForm ---
+
+3. CREAR RUTA EN URLS.PY
+
+```
+path('contact', views.contact),
+```

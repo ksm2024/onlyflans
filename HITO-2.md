@@ -26,6 +26,8 @@
   - header
   - footer
   - welcome
+  -contact
+
 
 2. Habilitar las rutas o url: /, /acerca y /bienvenido, creando las vistas y plantillas necesarias que extiendan la plantilla base para mostrar diferentes contenidos para cada vista.
 

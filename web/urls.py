@@ -9,5 +9,8 @@ urlpatterns = [
     path('about/', views.acerca),
     path('welcome/', views.welcome),
     # path('json/', views.hola_json),
+    path('contacto/', views.contacto),
+    path('exito/', views.exito),
+    path('signin/', views.iniciar_sesion),
     ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
