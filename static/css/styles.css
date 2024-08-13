@@ -12,7 +12,16 @@ h6 {
     color: #380786 ;
 }
 
+.custom-btn {
+    background-color: #9782b9;
+    border: none;
+  }
 
+  .custom-btn:hover {
+    background-color: white;
+    color: #9782b9; 
+    border: 1px solid #9782b9;
+  }
 
 #credito {
     margin-top: 3rem;

@@ -1,6 +1,6 @@
 from django import forms
 
-class ContactForm(forms.Form):
+class ContactFormForm(forms.Form):
     customer_email = forms.EmailField(
         label='Correo electrónico',
         widget=forms.EmailInput(attrs={'placeholder': 'Introduce tu correo electrónico'})
