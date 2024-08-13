@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
-from .models import Flan
+from .models import Flan, ContactForm
 from .forms import ContactFormForm
 
 def index(request):
@@ -27,7 +27,7 @@ def contacto(request):
         form = ContactFormForm(request.POST) # <- {"customer_email": "kiki@gamial.com", "customer_name": "Kiki", "message": "Hola soy Kiki"}
         if form.is_valid():
             #* MODEL - Guardamos la data en nuestra DB en la TABLA CONACTFORM
-            ContactFormForm.objects.create(**form.cleaned_data) # pasamos la data del diccionario .cleaned_data a argumentos
+            ContactForm.objects.create(**form.cleaned_data) # pasamos la data del diccionario .cleaned_data a argumentos
             return HttpResponseRedirect('/exito')
     else: 
         form = ContactFormForm()    
