@@ -1,5 +1,6 @@
 from django import forms
-# from .models import ContactForm
+from .models import ContactForm
+
 
 class ContactFormForm(forms.Form):
     customer_email = forms.EmailField(
@@ -16,3 +17,7 @@ class ContactFormForm(forms.Form):
         widget=forms.Textarea(attrs={'placeholder': 'Introduce tu mensaje', 'rows': 4})
     )
 
+class ContactModelForm (forms.ModelForm):
+    class Meta:
+        model = ContactForm
+        fields = ['customer_name', 'customer_email', 'message']
