@@ -50,6 +50,24 @@ urlpatterns = [
    - ruta /: deberá mostrar una lista de productos disponibles para la venta en la tienda de la PYME.
    - ruta /acerca: deberá mostrar una descripción de la utilidad del sitio web, junto con la descripción de la PYME y datos como la fecha de creación, entre otros que se dispongan.
    - ruta /bienvenido: deberá mostrar un mensaje de “bienvenido cliente” genérico en caso de no contar con los datos de un usuario y un mensaje de “bienvenido Juan Perez”(nombre variable) en el caso de contar con los datos del mismo.
+urls.py
+
+from django.urls import path 
+from . import views
+from django.conf import settings
+from django.conf.urls.static import static
+urlpatterns = [
+    # path('text/', views.hola),
+    path('', views.index, name= "indice"),
+    path('acerca', views.acerca, name= "acerca"),
+    path('bienvenido', views.bienvenido, name= "bienvenido"),
+    # path('json/', views.hola_json),
+    path('contacto', views.contacto, name="contacto"),
+    path('exito', views.exito, name= "exito"),
+    ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+
+
 
 Para la mejor visualización del sitio web que estamos creando se debe utilizar tanto la “grilla” de bootstrap como sus componentes, permitiendo al sitio web “acomodarse” a distintos tamaños de pantalla y resoluciones, además de permitir su rápido desarrollo. Puedes valerte de componentes de bootstrap como navbar, tarjetas o cards, entre otros según desees.
 
