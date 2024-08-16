@@ -28,13 +28,13 @@ def contacto(request):
     if request.method == 'POST':
         
         #* FORM
-        form = ContactModelForm (request.POST) # <- {"customer_email": "kiki@gamial.com", "customer_name": "Kiki", "message": "Hola soy Kiki"}
+        form = ContactFormForm (request.POST) # <- {"customer_email": "kiki@gamial.com", "customer_name": "Kiki", "message": "Hola soy Kiki"}
         if form.is_valid():
             #* MODEL - Guardamos la data en nuestra DB en la TABLA CONACTFORM
             ContactForm.objects.create(**form.cleaned_data) # pasamos la data del diccionario .cleaned_data a argumentos
             return HttpResponseRedirect('/exito')
     else: 
-        form = ContactModelForm ()    
+        form = ContactFormForm ()    
     return render(request, 'contactus.html', {'form':form})
 
 
