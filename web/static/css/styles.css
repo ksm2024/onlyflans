@@ -103,16 +103,6 @@ table {
 td {
     padding: 10px; 
 }
-.custom-btn {
-    background-color: #703fbe;
-    border: none;
-}
-
-.custom-btn:hover {
-    background-color: white;
-    color: #9782b9;
-    border: 1px solid #9782b9;
-}
 
 /* contactus */
 #contactanos {
@@ -129,7 +119,7 @@ td {
     font-style: bold;
     font-size:60px;
     
-  }
+}
 
   /* detail */
 
