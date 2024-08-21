@@ -4,9 +4,9 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <div id="indice_cover" class="h-100 p-5 text-white bg-dark rounded-3" style="text-align: left; background-image: url('{% static 'img/cover2.png' %}');  height: 100%;  width: 100%;">
-          <h2 style="color:black;text-shadow: -1px -1px 0px  white;1px 1px 0px white; font-size: 36px;font-weight: bold;">Nuestros productos</h2>
-          <p style="color:black;text-shadow: -1px -1px 0px  white;font-size: 20px;font-weight: bold;">OnlyFlans nace en el año 2021 buscando entregar flanes de calidad.</p>
+        <div id="indice_cover" class="h-100 p-5 text-white bg-dark rounded-3">
+          <h2 id="ns">Nuestros productos</h2>
+          <p id="indice_p">OnlyFlans nace en el año 2021 buscando entregar flanes de calidad.</p>
           <a href="{% url 'acerca' %}" class="btn btn-custom">Conoce más</a>
         </div>
       </div>
@@ -16,7 +16,7 @@
       {% for p in flanes_publicos %}
         <div class="col">
           <div class="card">
-            <img src="{{ p.image_url }}" class="card-img-top" alt="{{ p.name }}" style="object-fit: cover; width: 100%; height: 200px;" />
+            <a href="{% url 'detail_flan' flan_uuid=p.flan_uuid %}"><img src="{{ p.image_url }}" class="card-img-top" alt="{{ p.name }}" style="object-fit: cover; width: 100%; height: 200px;" /></a>
             <div class="card-body">
               <h5 class="card-title">{{ p.name }}</h5>
               <p class="short-description">
@@ -31,7 +31,6 @@
           </div>
         </div>
       {% endfor %}
-      
     </div>
   </div>
 

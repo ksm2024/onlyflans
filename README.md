@@ -17,6 +17,11 @@ estén registrados en el sistema.
 
 - Registro e inicio de sesión de usuarios
 - Navegación de postres disponibles
+- Contacto
+-------------
+
+- Registro e inicio de sesión de usuarios
+- Navegación de postres disponibles
 - Carrito de compras
 - Realización de pedidos
 - Gestión de pedidos por parte de los administradores
@@ -83,14 +88,19 @@ estén registrados en el sistema.
 
 1. Abre tu navegador web y navega a `http://127.0.0.1:8000/` para ver la página de inicio.
 2. Usa el panel de administración en `http://127.0.0.1:8000/admin/` para gestionar el contenido de la aplicación.
-3. Mensaje de texto `http://127.0.0.1:8000/text/`
-4. Json `http://127.0.0.1:8000/json/`
-5. Template `http://127.0.0.1:8000/template/`
+3. `http://127.0.0.1:8000/acerca`
+4. `http://127.0.0.1:8000/accounts/login/`
+5. `http://127.0.0.1:8000/contacto`
+
 
 ### Rutas
 
-- `/` - Página principal
-- `/` - Página de ejemplo de plantilla
+- `/` - Página principal de inicio
+- `/acerca` - Página descripcion del servicio
+- `/accounts/login/` - Página iniciar sesión
+- `/bienvenido` - Página bienvenida solo visible al iniciar sesión
+- `/contacto` - Página contacto por formulario
+
 
 ### Estructura del Proyecto
 
@@ -126,6 +136,8 @@ onlyflans/
 - KATHERINE SILVA
   - [GitHub](<https://github.com/ksm2024/onlyflans.git>)
 
+- NICOLAS JELDRES
+- [GitHub](<https://github.com/NicolasJeldresL/onlyflans>)
  
 ### Contribuir
 

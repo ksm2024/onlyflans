@@ -23,7 +23,7 @@
     {% for p in flanes_privados %}
     <div class="col">
       <div class="card">
-        <img src="{{ p.image_url }}" class="card-img-top" alt="{{ p.name }}" style="object-fit: cover; width: 100%; height: 200px;">
+        <a href="{% url 'detail_flan' flan_uuid=p.flan_uuid %}"><img src="{{ p.image_url }}" class="card-img-top" alt="{{ p.name }}" style="object-fit: cover; width: 100%; height: 200px;" /></a>
         <div class="card-body">
           <h5 class="card-title">{{ p.name }}</h5>
           <p class="short-description">{{ p.description|slice:":50" }}{% if p.description|length > 50 %}...{% endif %}</p>
